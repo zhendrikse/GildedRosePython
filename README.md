@@ -6,12 +6,12 @@ Teach / show people how to refactor legacy code, but before they even begin, how
 
 By default, approval tests are run, coverage reports are generated and served via an HTTP server, that is equipped with a hot reload. So no further manual actions are needed but a press on the run button.
 
-## Running coverage manually
+## Running manually
 
 The generated HTML coverage reports can easily be inspected and live monitored by
 
 ```bash
-$ python -m http.server 8000 -d htmlcov &
+$ bash run_test_and_coverage.sh
 ```
 
 After each run, the HTML reports and view are live updated (hot reload)!
