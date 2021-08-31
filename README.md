@@ -4,10 +4,11 @@ Teach / show people how to refactor legacy code, but before they even begin, how
 
 ## Coverage
 
-Generate coverage by invoking
+The generated HTML coverage reports can easily be inspected by
 
 ```bash
-$ coverage html gilded_rose_test.py
+$ cd htmlcov
+$ python -m http.server 8000
 ```
 
 ## References
