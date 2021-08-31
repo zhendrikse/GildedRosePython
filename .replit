@@ -1,1 +1,1 @@
-run = "pytest && coverage run --branch --source gilded_rose,gilded_rose_test gilded_rose_test.py && coverage report -m && coverage html"
+run = "bash run_test_and_coverage.sh"

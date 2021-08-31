@@ -2,14 +2,19 @@
 
 Teach / show people how to refactor legacy code, but before they even begin, how to take a snapshot of the current situation first using approval testing. The example used here is based on the well-known [Gilded Rose kata by Emily Bache](https://github.com/emilybache/GildedRose-Refactoring-Kata), but then in the updated version of [Gil Gonçalves](https://github.com/LuRsT/gilded_rose_kata).
 
-## Coverage
+## Approval tests and coverage reports
 
-The generated HTML coverage reports can easily be inspected by
+By default, approval tests are run, coverage reports are generated and served via an HTTP server, that is equipped with a hot reload. So no further manual actions are needed but a press on the run button.
+
+## Running coverage manually
+
+The generated HTML coverage reports can easily be inspected and live monitored by
 
 ```bash
-$ cd htmlcov
-$ python -m http.server 8000
+$ python -m http.server 8000 -d htmlcov &
 ```
+
+After each run, the HTML reports and view are live updated (hot reload)!
 
 ## References
 
