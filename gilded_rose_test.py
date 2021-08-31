@@ -6,7 +6,7 @@ class GildedRoseTest(unittest.TestCase):
   def test_main(self):
       items = [
         Item(name='+5 Dexterity Vest', sell_in=10, quality=20),
-        #Item(name='Aged Brie', sell_in=2, quality=0),
+        Item(name='Aged Brie', sell_in=2, quality=0),
       ]
       GildedRose(items).update_quality()
       result = items

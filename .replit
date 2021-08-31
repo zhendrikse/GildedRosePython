@@ -1,1 +1,1 @@
-run = "pytest && coverage html gilded_rose_test.py"
+run = "pytest && coverage run --branch --source gilded_rose,gilded_rose_test gilded_rose_test.py && coverage report -m"
