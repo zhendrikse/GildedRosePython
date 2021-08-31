@@ -1,1 +1,1 @@
-run = "coverage html main.py && coverage report -m"
+run = "pytest && coverage html gilded_rose_test.py"

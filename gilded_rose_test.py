@@ -12,8 +12,13 @@ class GettingStartedTest(unittest.TestCase):
       result = items
       verify(result)
 
+if __name__ == "__main__":
+    unittest.main()
 
 
+# 
+# S O L U T I O N
+#
 # def main():
 #     items = [
 #         Item(name='+5 Dexterity Vest', sell_in=10, quality=20),
@@ -35,10 +40,3 @@ class GettingStartedTest(unittest.TestCase):
 #             print(item)
 #         print('')
 #         GildedRose(items).update_quality()
-
-
-#if __name__ == '__main__':
-#    main()
-
-if __name__ == "__main__":
-    unittest.main()
