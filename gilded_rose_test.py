@@ -15,7 +15,6 @@ class GildedRoseTest(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 
-
 # 
 # S O L U T I O N
 #
