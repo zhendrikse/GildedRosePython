@@ -16,3 +16,4 @@ $ python -m http.server 8000
 - [Approval tests in Python](https://github.com/approvals/approvaltests.Python)
 - [Emily Bache's version of the Gilded Rose](https://github.com/emilybache/GildedRose-Refactoring-Kata)
 - [The updated version to Python 3 of Emily's version](https://github.com/LuRsT/gilded_rose_kata)
+- [Run webserver locally](https://gist.github.com/willurd/5720255)
