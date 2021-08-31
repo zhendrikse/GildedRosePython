@@ -2,7 +2,7 @@ import unittest
 from approvaltests.approvals import verify
 from gilded_rose import Item, GildedRose
 
-class GettingStartedTest(unittest.TestCase):
+class GildedRoseTest(unittest.TestCase):
   def test_main(self):
       items = [
         Item(name='+5 Dexterity Vest', sell_in=10, quality=20),
