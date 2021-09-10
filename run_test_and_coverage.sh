@@ -5,5 +5,6 @@ pytest && coverage run --branch --source gilded_rose,gilded_rose_test gilded_ros
 if [ -z $PORT_IS_FREE ]; then
 	echo "HTTP server running"
 else
-	python -m http.server 8000 -d htmlcov &
+  echo "Starting HTTP server for code coverage"
+	nohup python -m http.server 8000 -d htmlcov &
 fi
