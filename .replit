@@ -1,2 +1,2 @@
-onBoot  = "nohup python -m http.server 8000 -d htmlcov &"
+#onBoot  = "python -m http.server 8000 -d htmlcov"
 run = "bash run_test_and_coverage.sh"
