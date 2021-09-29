@@ -1,15 +1,27 @@
+class Quality:
+    def __init__(self, quality: int):
+        self.value = quality
+
+    def increase(self):
+        if self.value < 50:
+            self.value += 1
+
+    def decrease(self):
+        if self.value > 0:
+            self.value -= 1
+
+
 class Item:
     def __init__(self, name, sell_in, quality):
         self.name = name
         self.sell_in = sell_in
-        self.quality = quality
+        self.quality = Quality(quality)
 
     def __repr__(self):
-        return "%s, %s, %s" % (self.name, self.sell_in, self.quality)
-    
+        return "%s, %s, %s" % (self.name, self.sell_in, self.quality.value)
+
     def update_quality(self) -> None:
-        if self.quality > 0:
-            self.quality -= 1
+        self.quality.decrease()
         self.sell_in -= 1
 
 
@@ -18,12 +30,10 @@ class AgedBrieItem(Item):
         super().__init__("Aged Brie", sell_in, quality)
 
     def update_quality(self) -> None:
-        if self.quality < 50:
-            self.quality += 1
+        self.quality.increase()
         self.sell_in -= 1
         if self.sell_in < 0:
-            if self.quality < 50:
-                self.quality += 1
+            self.quality.increase()
 
 
 class BackstagePassItem(Item):
@@ -32,18 +42,15 @@ class BackstagePassItem(Item):
                          quality)
 
     def update_quality(self) -> None:
-        if self.quality < 50:
-            self.quality += 1
-            if self.sell_in < 11:
-                if self.quality < 50:
-                    self.quality += 1
-            if self.sell_in < 6:
-                if self.quality < 50:
-                    self.quality += 1
+        self.quality.increase()
+        if self.sell_in < 11:
+            self.quality.increase()
+        if self.sell_in < 6:
+            self.quality.increase()
 
         self.sell_in -= 1
         if self.sell_in < 0:
-            self.quality = 0
+            self.quality = Quality(0)
 
 
 class SulfurasItem(Item):
