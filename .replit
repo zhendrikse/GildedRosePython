@@ -1,2 +1,3 @@
 #onBoot  = "python -m http.server 8000 -d htmlcov"
-run = "bash run_test_and_coverage.sh"
+#run = "bash run_test_and_coverage.sh"
+run = "mamba --format=documentation *_spec.py"
