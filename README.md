@@ -22,3 +22,4 @@ After each run, the HTML reports and view are live updated (hot reload)!
 - [Emily Bache's version of the Gilded Rose](https://github.com/emilybache/GildedRose-Refactoring-Kata)
 - [The updated version to Python 3 of Emily's version](https://github.com/LuRsT/gilded_rose_kata)
 - [Run webserver locally](https://gist.github.com/willurd/5720255)
+- [Mamba docs](https://readthedocs.org/projects/mamba-bdd/downloads/pdf/latest/)

@@ -1,0 +1,4 @@
+[run]
+#source = gilded_rose.py
+omit = /opt/virtualenvs/python3/lib/python3.8/site-packages/**.*
+branch = True
