@@ -1,6 +1,6 @@
 [[package]]
 name = "approvaltests"
-version = "2.0.0"
+version = "2.2.0"
 description = "Assertion/verification library to aid testing"
 category = "main"
 optional = false
@@ -9,6 +9,14 @@ python-versions = ">=3.6.1"
 [package.dependencies]
 pyperclip = "1.5.27"
 pytest = "*"
+
+[[package]]
+name = "args"
+version = "0.1.0"
+description = "Command Arguments for Humans."
+category = "main"
+optional = false
+python-versions = "*"
 
 [[package]]
 name = "atomicwrites"
@@ -33,6 +41,17 @@ tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)"
 tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "mypy", "pytest-mypy-plugins"]
 
 [[package]]
+name = "clint"
+version = "0.5.1"
+description = "Python Command Line Interface Tools"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+args = "*"
+
+[[package]]
 name = "colorama"
 version = "0.4.4"
 description = "Cross-platform colored terminal text."
@@ -52,12 +71,32 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4"
 toml = ["toml"]
 
 [[package]]
+name = "expects"
+version = "0.9.0"
+description = "Expressive and extensible TDD/BDD assertion library for Python"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "iniconfig"
 version = "1.1.1"
 description = "iniconfig: brain-dead simple config-ini parsing"
 category = "main"
 optional = false
 python-versions = "*"
+
+[[package]]
+name = "mamba"
+version = "0.11.2"
+description = "The definitive testing tool for Python. Born under the banner of Behavior Driven Development."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+clint = "*"
+coverage = "*"
 
 [[package]]
 name = "packaging"
@@ -89,6 +128,14 @@ description = "library with cross-python path, ini-parsing, io, code, log facili
 category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[[package]]
+name = "py-expect"
+version = "0.1.2"
+description = "Python validate tool for json or other else"
+category = "main"
+optional = false
+python-versions = "*"
 
 [[package]]
 name = "pyparsing"
@@ -150,12 +197,15 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "7bc900b4f3cb40ae6b002141d6df3c666ebdd57138e135c0e10896dd6ddf1fae"
+content-hash = "e4a87a87660e7f665714c6277b71613e66fa4e1873910dd05b24be273ee74b68"
 
 [metadata.files]
 approvaltests = [
-    {file = "approvaltests-2.0.0-py3-none-any.whl", hash = "sha256:8ecbda539c0d5973e77821456f2a6c04a0d492dae661e88cd958728d569d737f"},
-    {file = "approvaltests-2.0.0.tar.gz", hash = "sha256:d56257283fa1ffea48af287f4aa8b2d9b15491dc609f05f116e3dbb3f1994b35"},
+    {file = "approvaltests-2.2.0-py3-none-any.whl", hash = "sha256:570a2d2cd39ea7274d62c93e0e210b37ab2f2e9d9f4a54d07634e09c37288761"},
+    {file = "approvaltests-2.2.0.tar.gz", hash = "sha256:7776318ede09188dd2397a2f6b4624feb852cdb4d429b25e4ade950cf3283c1a"},
+]
+args = [
+    {file = "args-0.1.0.tar.gz", hash = "sha256:a785b8d837625e9b61c39108532d95b85274acd679693b71ebb5156848fcf814"},
 ]
 atomicwrites = [
     {file = "atomicwrites-1.4.0-py2.py3-none-any.whl", hash = "sha256:6d1784dea7c0c8d4a5172b6c620f40b6e4cbfdf96d783691f2e1302a7b88e197"},
@@ -164,6 +214,9 @@ atomicwrites = [
 attrs = [
     {file = "attrs-21.2.0-py2.py3-none-any.whl", hash = "sha256:149e90d6d8ac20db7a955ad60cf0e6881a3f20d37096140088356da6c716b0b1"},
     {file = "attrs-21.2.0.tar.gz", hash = "sha256:ef6aaac3ca6cd92904cdd0d83f629a15f18053ec84e6432106f7a4d04ae4f5fb"},
+]
+clint = [
+    {file = "clint-0.5.1.tar.gz", hash = "sha256:05224c32b1075563d0b16d0015faaf9da43aa214e4a2140e51f08789e7a4c5aa"},
 ]
 colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
@@ -223,9 +276,15 @@ coverage = [
     {file = "coverage-5.5-pp37-none-any.whl", hash = "sha256:2a3859cb82dcbda1cfd3e6f71c27081d18aa251d20a17d87d26d4cd216fb0af4"},
     {file = "coverage-5.5.tar.gz", hash = "sha256:ebe78fe9a0e874362175b02371bdfbee64d8edc42a044253ddf4ee7d3c15212c"},
 ]
+expects = [
+    {file = "expects-0.9.0.tar.gz", hash = "sha256:419902ccafe81b7e9559eeb6b7a07ef9d5c5604eddb93000f0642b3b2d594f4c"},
+]
 iniconfig = [
     {file = "iniconfig-1.1.1-py2.py3-none-any.whl", hash = "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3"},
     {file = "iniconfig-1.1.1.tar.gz", hash = "sha256:bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32"},
+]
+mamba = [
+    {file = "mamba-0.11.2.tar.gz", hash = "sha256:75cfc6dfd287dcccaf86dd753cf48e0a7337487c7c3fafda05a6a67ded6da496"},
 ]
 packaging = [
     {file = "packaging-21.0-py3-none-any.whl", hash = "sha256:c86254f9220d55e31cc94d69bade760f0847da8000def4dfe1c6b872fd14ff14"},
@@ -238,6 +297,10 @@ pluggy = [
 py = [
     {file = "py-1.10.0-py2.py3-none-any.whl", hash = "sha256:3b80836aa6d1feeaa108e046da6423ab8f6ceda6468545ae8d02d9d58d18818a"},
     {file = "py-1.10.0.tar.gz", hash = "sha256:21b81bda15b66ef5e1a777a21c4dcd9c20ad3efd0b3f817e7a809035269e1bd3"},
+]
+py-expect = [
+    {file = "py-expect-0.1.2.tar.gz", hash = "sha256:0bf06258dbc8dd99f528300974b5bc117456f62590c3791e9292531a81ac88b3"},
+    {file = "py_expect-0.1.2-py2-none-any.whl", hash = "sha256:202aad41113f4978896fe3009ce7ab64eea00b617a9e13a42cb2d5c30f550a80"},
 ]
 pyparsing = [
     {file = "pyparsing-2.4.7-py2.py3-none-any.whl", hash = "sha256:ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b"},
