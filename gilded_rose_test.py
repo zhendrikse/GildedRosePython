@@ -1,6 +1,6 @@
 import unittest
 from approvaltests.combination_approvals import verify_all_combinations
-from gilded_rose import GildedRose, Item
+from gilded_rose import GildedRose, Item, AgedBrieItem, SulfurasItem, BackstagePassItem
 
 
 class GildedRoseTest(unittest.TestCase):
@@ -15,7 +15,14 @@ class GildedRoseTest(unittest.TestCase):
                                 [names, sellIns, qualities])
 
     def do_update_quality(self, name: str, sellIn: int, quality: int) -> str:
-        items = [Item(name, sellIn, quality)]
+        if name == "Aged Brie":
+          items = [AgedBrieItem(sellIn, quality)]
+        elif name == "Backstage passes to a TAFKAL80ETC concert":
+          items = [BackstagePassItem(sellIn, quality)]
+        elif name == "Sulfuras, Hand of Ragnaros":
+          items = [SulfurasItem(sellIn, quality)]
+        else:
+          items = [Item(name, sellIn, quality)]
         app = GildedRose(items)
         app.update_quality()
         return app.items[0]
