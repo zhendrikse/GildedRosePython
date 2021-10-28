@@ -12,7 +12,7 @@ Currently, there are three branches:
 
 1. The master branch, where you can start the kata
 2. The approvals branch, where approval tests have been added
-3. The polymorphism branch, where the refactoring up to polymorphism has been carried out
+3. The polymorphism_breakpoint branch, where the refactoring up to polymorphism has been carried out
 4. the polymorphism_done branch, where the refactoring using polymorphism has been completed
 
 ## References
