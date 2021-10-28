@@ -1,6 +1,6 @@
 [[package]]
 name = "approvaltests"
-version = "2.0.0"
+version = "2.2.0"
 description = "Assertion/verification library to aid testing"
 category = "main"
 optional = false
@@ -154,8 +154,8 @@ content-hash = "7bc900b4f3cb40ae6b002141d6df3c666ebdd57138e135c0e10896dd6ddf1fae
 
 [metadata.files]
 approvaltests = [
-    {file = "approvaltests-2.0.0-py3-none-any.whl", hash = "sha256:8ecbda539c0d5973e77821456f2a6c04a0d492dae661e88cd958728d569d737f"},
-    {file = "approvaltests-2.0.0.tar.gz", hash = "sha256:d56257283fa1ffea48af287f4aa8b2d9b15491dc609f05f116e3dbb3f1994b35"},
+    {file = "approvaltests-2.2.0-py3-none-any.whl", hash = "sha256:570a2d2cd39ea7274d62c93e0e210b37ab2f2e9d9f4a54d07634e09c37288761"},
+    {file = "approvaltests-2.2.0.tar.gz", hash = "sha256:7776318ede09188dd2397a2f6b4624feb852cdb4d429b25e4ade950cf3283c1a"},
 ]
 atomicwrites = [
     {file = "atomicwrites-1.4.0-py2.py3-none-any.whl", hash = "sha256:6d1784dea7c0c8d4a5172b6c620f40b6e4cbfdf96d783691f2e1302a7b88e197"},
