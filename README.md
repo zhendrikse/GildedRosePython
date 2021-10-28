@@ -6,15 +6,14 @@ Teach / show people how to refactor legacy code, but before they even begin, how
 
 By default, approval tests are run, coverage reports are generated and served via an HTTP server, that is equipped with a hot reload. So no further manual actions are needed but a press on the run button.
 
-## Running manually
+## Branches
 
-The generated HTML coverage reports can easily be inspected and live monitored by
+Currently, there are three branches:
 
-```bash
-$ bash run_test_and_coverage.sh
-```
-
-After each run, the HTML reports and view are live updated (hot reload)!
+1. The master branch, where you can start the kata
+2. The approvals branch, where approval tests have been added
+3. The polymorphism branch, where the refactoring up to polymorphism has been carried out
+4. the polymorphism_done branch, where the refactoring using polymorphism has been completed
 
 ## References
 
