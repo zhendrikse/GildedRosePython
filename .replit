@@ -1,2 +1,2 @@
-onBoot  = "nohup python -m http.server 8000 -d htmlcov &"
-run = "bash run_test_and_coverage.sh"
+onBoot  = "python -m http.server 8000 -d htmlcov"
+run = "pytest && coverage run --branch --source gilded_rose gilded_rose_test.py && coverage report -m && coverage html"
